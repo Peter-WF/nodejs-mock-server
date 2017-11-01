@@ -6,8 +6,6 @@ node_modules/
 .idea/
 .vscode/
 
-dist/
-
 .local
 .mock
 .server

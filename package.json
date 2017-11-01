@@ -11,5 +11,12 @@
     "nodejs"
   ],
   "author": "Peter-WF",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "colors": "^1.1.2",
+    "glob": "^7.1.2",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1"
+  }
 }
