@@ -1,0 +1,15 @@
+{
+  "name": "mock-server",
+  "version": "0.0.1",
+  "description": "a dev mock server for nodejs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mock-server",
+    "nodejs"
+  ],
+  "author": "Peter-WF",
+  "license": "ISC"
+}
