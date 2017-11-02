@@ -4,6 +4,10 @@
 
 ## TODO List
 
-1. dev server
+* [x] dev server
 
-2. request/response intercept 
+* [x] request/response intercept 
+
+* [ ] guide && schematic diagram
+
+* [ ] add mock feature with mockjs 
