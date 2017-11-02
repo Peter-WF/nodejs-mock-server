@@ -1,4 +1,4 @@
-# mock-server
+# nodejs-mock-server
 
 > A dev mock server for nodejs project, focus on improving development efficiency
 

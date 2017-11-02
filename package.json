@@ -1,5 +1,5 @@
 {
-  "name": "mock-server",
+  "name": "nodejs-mock-server",
   "version": "0.0.1",
   "description": "a dev mock server for nodejs project",
   "main": "index.js",
