@@ -6,25 +6,14 @@
  */
 
 const server = require('./server')
-
-// 设置全局变量 mock-server => MS
-const originMS = {}
+const proxy = require('./proxy')
 
 module.exports = {
   init({ app, appDir }) {
-    // mock server proxy
-    global.MS = new Proxy(app, {
-      get(target, propKey) {
-        return originMS[propKey] != null ? originMS[propKey] : target[propKey]
-      }
-      // ,
-      // set(target, propKey, value) {
-      //   // 避免源示例对象
-      //   originMS[propKey] = value
-      // }
+    MS.init({
+      app,
+      appDir
     })
-
-    global.MS.appDir = appDir
 
     // server init
     server.init()
