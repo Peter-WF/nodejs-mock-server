@@ -23,7 +23,7 @@ MS.init({
   appDir: __dirname
 })
 ```
-#### 3. Visit `/mock-server` 
+#### 3. Visit `/mock-server/#/` 
 
 ### Usage Example
 

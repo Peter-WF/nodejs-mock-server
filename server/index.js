@@ -13,11 +13,11 @@ const api = require('./api')
 module.exports = {
   init() {
     // 初始化静态资源路由
-    MS.use(express.static(path.join(__dirname, './dist')))
+    MS.use('/mock-server/static/', express.static(path.join(__dirname, './dist/static')))
 
     // 初始化编辑页路由
     MS.get('/mock-server/', function(req, res) {
-      res.render(path.join(__dirname, './dist/index.html'))
+      res.sendFile(path.join(__dirname, './dist/index.html'))
     })
 
     // 初始化接口路由
