@@ -5,17 +5,4 @@
  * @description
  */
 
-const server = require('./server')
-const proxy = require('./proxy')
-
-module.exports = {
-  init({ app, appDir }) {
-    MS.init({
-      app,
-      appDir
-    })
-
-    // server init
-    server.init()
-  }
-}
+require('./proxy')
