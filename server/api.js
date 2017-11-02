@@ -6,17 +6,11 @@
  */
 
 'use strict';
-const bodyParser = require('body-parser');
 const glob = require('glob')
 const utils = require('../utils')
 
 module.exports = {
   init() {
-    // for parsing application/json
-    MS.use(bodyParser.json());
-    // for parsing application/x-www-form-urlencoded
-    MS.use(bodyParser.urlencoded({ extended: true }));
-
     // 获取当前已存储的接口列表
     MS.get('/mock-server/api/getCacheFiles', function(req, res, next) {
       glob(MS.appDir + "/mock/.server/**/*.json", function(err, files) {
@@ -46,7 +40,6 @@ module.exports = {
     })
     // 更新接口数据
     MS.post('/mock-server/api/:method/:type/*', checkMockType, function(req, res, next) {
-      debugger
       try {
         const data = JSON.parse(req.body.JSONString)
         const cachePath = utils.getCacheFileAbsolutePath(req.params[0], req.params.method, `.${req.params.type}`)
