@@ -9,7 +9,6 @@
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
-const filter = require('../filter')
 const server = require('../server')
 
 class MS {
@@ -17,8 +16,6 @@ class MS {
     this._app = app
     this.appDir = appDir
     this.setAppConfig()
-    // mock-server 中间件初始化
-    filter.init()
     // 在线编辑、预览服务初始化
     server.init()
   }

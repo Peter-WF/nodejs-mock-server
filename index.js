@@ -6,3 +6,5 @@
  */
 
 require('./proxy')
+
+require('./filter')

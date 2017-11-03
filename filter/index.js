@@ -7,8 +7,8 @@
 
 'use strict';
 
+const intercept = MS.intercept = require('./intercept')
+
 module.exports = {
-  init() {
-    MS.use('/api/*', require('./intercept'))
-  }
+  intercept
 }

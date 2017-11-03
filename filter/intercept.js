@@ -48,4 +48,6 @@ function localMockIntercept(req, res, next) {
   next()
 }
 
-module.exports = localMockIntercept
+module.exports = function(opt) {
+  return localMockIntercept
+}

@@ -22,6 +22,9 @@ MS.init({
   app,
   appDir: __dirname
 })
+
+// add intercept
+app.use('/api/*', MS.intercept())
 ```
 #### 3. Visit `/mock-server/#/` 
 
