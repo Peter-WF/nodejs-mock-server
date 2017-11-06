@@ -1,6 +1,6 @@
 {
   "name": "nodejs-mock-server",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a dev mock server for nodejs project",
   "main": "index.js",
   "scripts": {
