@@ -34,7 +34,7 @@ module.exports = {
       })
     })
     // 获取接口数据
-    MS.get('/mock-server/api/:method/:type/*', checkMockType, function(req, res, next) {
+    MS.get('/mock-server/api/:method/:type/*', utils.cors, checkMockType, function(req, res, next) {
       const cachePath = utils.getCacheFileAbsolutePath(req.params[0], req.params.method, `.${req.params.type}`)
       res.send(utils.parseData(cachePath))
     })
