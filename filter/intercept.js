@@ -32,7 +32,7 @@ function localMockIntercept(req, res, next) {
   const mockUrl = getMockUrl(req)
   if (mockUrl) {
     console.log(`[mock-server] redirect to '${mockUrl}' for mock data`.green);
-    res.redirect(mockUrl)
+    res.redirect(303, mockUrl) // 强制以 get 请求重定向至 mockUrl
     return
   }
 

@@ -11,6 +11,10 @@ const utils = require('../utils')
 
 module.exports = {
   init() {
+    // /mock-server/* 支持 cors
+    MS.options('/mock-server/*', utils.cors, function(req, res) {
+      res.sendStatus(200)
+    })
     // 获取当前已存储的接口列表
     MS.get('/mock-server/api/getCacheFiles', function(req, res, next) {
       glob(MS.appDir + "/mock/.server/**/*.json", function(err, files) {
