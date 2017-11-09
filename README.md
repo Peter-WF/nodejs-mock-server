@@ -26,6 +26,9 @@ MS.init({
 // add intercept
 app.use('/api/*', MS.intercept())
 ```
+
+##### demo: [nodejs-simple-demo](https://github.com/Peter-WF/nodejs-simple-demo/blob/master/app/routes/index.js#L22)
+
 #### 3. Visit `/mock-server/#/` 
 
 ### Usage Example
