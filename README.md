@@ -2,7 +2,7 @@
 
 > A dev mock server for nodejs project, focus on improving development efficiency
 
-## Getting Started
+### Getting Started
 
 #### 1. Install npm package:
 ```
@@ -27,7 +27,7 @@ MS.init({
 app.use('/api/*', MS.intercept())
 ```
 
-##### demo: [nodejs-simple-demo](https://github.com/Peter-WF/nodejs-simple-demo/blob/master/app/routes/index.js#L22)
+demo: [nodejs-simple-demo](https://github.com/Peter-WF/nodejs-simple-demo/blob/master/app/routes/index.js#L22)
 
 #### 3. Visit `/mock-server/#/` 
 
@@ -35,15 +35,11 @@ app.use('/api/*', MS.intercept())
 
 * [Simple](/doc/usage-examples.md)
 
-### Demo
-
-* [nodejs-simple-demo usage examples](https://github.com/Peter-WF/nodejs-simple-demo)
-
 ### Guide && Schematic Diagram
 
 * [Schematic Diagram](/doc/schematic-diagram.md)
 
-## TODO List
+### TODO List
 
 * [x] dev server
 
