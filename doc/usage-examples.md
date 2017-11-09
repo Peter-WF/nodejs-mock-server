@@ -6,4 +6,4 @@
 
 #### GIF
 
-![presentation](/doc/presentation.gif)
+<img src="/doc/presentation.gif" style="border:1px;background:#cacaca;"/> 
