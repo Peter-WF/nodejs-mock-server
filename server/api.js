@@ -16,8 +16,11 @@ module.exports = {
       res.sendStatus(200)
     })
     // 获取当前已存储的接口列表
-    MS.get('/mock-server/api/getCacheFiles', function(req, res, next) {
-      glob(MS.appDir + "/mock/.server/**/*.json", function(err, files) {
+    MS.get('/mock-server/api/cache/:type/', function(req, res, next) {
+      const supportType = ['local', 'server', 'mock']
+      const type = supportType.indexOf(req.params.type) > -1 ? req.params.type : 'server'
+
+      glob(MS.appDir + `/mock/.${type}/**/*.json`, function(err, files) {
         if (err) {
           res.send({
             success: false,
@@ -25,7 +28,7 @@ module.exports = {
           })
         } else {
           files = files.map(item => {
-            return item.replace(`${MS.appDir}/mock/.server`, '')
+            return item.replace(`${MS.appDir}/mock/.${type}`, '')
           })
 
           res.send({
