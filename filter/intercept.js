@@ -20,7 +20,7 @@ function getMockUrl(req) {
   if (mockType) {
     return `/mock-server/api/${method}/${mockType}${apiPath}`
   } else if (apiPath.indexOf('/mock-server') !== 0 && req.cookies.globalAgent) {
-    return `/mock-server/api/${method}/server${apiPath}`
+    return `/mock-server/api/${method}/mock${apiPath}`
   }
 }
 
